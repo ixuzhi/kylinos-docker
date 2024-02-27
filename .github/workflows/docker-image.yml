@@ -3,17 +3,14 @@ name: Publish Docker image
 on:
   workflow_dispatch:
 
-env:
-  TEST_TAG: user/app:test
-
 jobs:
-  push_to_registry:
+  build_and_push:
     strategy:
       matrix:
         SP_VERSION: [1, 2, 3]
 
     name: Push Docker image to Docker Hub
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,4 +34,4 @@ jobs:
             SP_VERSION=${{ matrix.SP_VERSION }}
           file: ./kylin_v10.sys.Dockerfile
           push: true
-          tags: hxsoong/kylin:v10-sp${{ matrix.SP_VERSION }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/kylin:v10-sp${{ matrix.SP_VERSION }}

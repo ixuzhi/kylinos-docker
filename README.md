@@ -3,13 +3,13 @@
 银河麒麟高级服务器操作系统V10系统docker镜像, 基于kylin软件源构建
 
 -	**Maintained by**:  
-	[haixinsong/kylin-sys-docker-image](https://github.com/haixinsong/kylin-sys-docker-image)
+	[MacroSAN-Tech/kylin-sys-docker-image](https://github.com/MacroSAN-Tech/kylin-sys-docker-image)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v10-sp1`](https://github.com/haixinsong/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
--	[`v10-sp2`](https://github.com/haixinsong/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
--	[`v10-sp3`](https://github.com/haixinsong/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
+-	[`v10-sp1`](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
+-	[`v10-sp2`](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
+-	[`v10-sp3`](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
 
 # Quick reference (cont.)
 
@@ -21,25 +21,25 @@
 ## pull specific arch image
 
 ```console
-$ docker pull --platform=linux/amd64 hxsoong/kylin:v10-sp3
+$ docker pull --platform=linux/amd64 macrosan/kylin:v10-sp3
 ```
 
 ## Run for testing
 
 ```console
-$ docker run -it hxsoong/kylin:v10-sp3
+$ docker run -it macrosan/kylin:v10-sp3
 ```
 
 ### Build a new image with some packages
 
 ```dockerfile
-FROM hxsoong/kylin:v10-sp3
+FROM macrosan/kylin:v10-sp3
 RUN yum install -y vi
 ```
 
 # Image Variants
 
-## hxsoong/kylin:v10-sp3
+## macrosan/kylin:v10-sp3
 ```
 bash-5.0# cat /etc/.productinfo 
 Kylin Linux Advanced Server
@@ -48,7 +48,7 @@ bash-5.0# rpm -q kylin-release
 kylin-release-10-24.6.p150.ky10.x86_64
 ```
 
-## hxsoong/kylin:v10-sp2
+## macrosan/kylin:v10-sp2
 ```
 bash-5.0# cat /etc/.productinfo 
 Kylin Linux Advanced Server
@@ -57,7 +57,7 @@ bash-5.0# rpm -q kylin-release
 kylin-release-10-24.6.p41.ky10.x86_64
 ```
 
-## hxsoong/kylin:v10-sp1
+## macrosan/kylin:v10-sp1
 ```
 bash-5.0# cat /etc/.productinfo 
 Kylin Linux Advanced Server

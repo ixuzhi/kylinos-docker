@@ -34,4 +34,4 @@ jobs:
             SP_VERSION=${{ matrix.SP_VERSION }}
           file: ./kylin_v10.sys.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/kylin:v10-sp${{ matrix.SP_VERSION }}
+          tags: macrosan/kylin:v10-sp${{ matrix.SP_VERSION }}

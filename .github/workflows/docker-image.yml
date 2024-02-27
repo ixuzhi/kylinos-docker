@@ -9,7 +9,7 @@ jobs:
       matrix:
         SP_VERSION: [1, 2, 3]
 
-    name: Push Docker image to Docker Hub
+    name: Build and push
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout

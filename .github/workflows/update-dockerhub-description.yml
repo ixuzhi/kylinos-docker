@@ -13,6 +13,6 @@ jobs:
       - name: Update repo description
         uses: peter-evans/dockerhub-description@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: ${{ secrets.DOCKER_USERNAME }}/kylin
+          repository: ${{ vars.DOCKER_USERNAME }}/kylin

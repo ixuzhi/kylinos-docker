@@ -1,5 +1,7 @@
 # Quick reference
 
+[![Publish Docker image](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/actions/workflows/docker-image.yml/badge.svg)](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/actions/workflows/docker-image.yml)
+
 银河麒麟高级服务器操作系统V10系统docker镜像, 基于kylin软件源构建
 
 -	**Maintained by**:  

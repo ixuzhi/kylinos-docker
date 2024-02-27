@@ -22,7 +22,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
@@ -34,4 +34,4 @@ jobs:
             SP_VERSION=${{ matrix.SP_VERSION }}
           file: ./kylin_v10.sys.Dockerfile
           push: true
-          tags: macrosan/kylin:v10-sp${{ matrix.SP_VERSION }}
+          tags: ${{ vars.DOCKER_USERNAME }}/kylin:v10-sp${{ matrix.SP_VERSION }}
